@@ -9,7 +9,7 @@
     <!-- Open Graph for Text Preview -->
     <meta property="og:title" content="TJB Legacy Construction Group">
     <meta property="og:description" content="Professional construction & renovations. Additions • Kitchens • Bathrooms • Decks. Premium quality. Licensed NJ Contractor #34EB018170900">
-    <meta property="og:image" content="https://tjb-legacy.vercel.app/hero.jpg">
+    <meta property="og:image" content="https://tjb-legacy-website.vercel.app/project5.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://tjb-legacy.vercel.app">
@@ -109,7 +109,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 58, 82, 0.7) 0%, rgba(45, 90, 122, 0.7) 100%), url('hero.jpg') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.35) 0%, rgba(45, 90, 122, 0.35) 100%), url('crane-hero.jpg') center/cover no-repeat;
             color: var(--white);
             padding: 120px 20px;
             text-align: center;
@@ -122,12 +122,15 @@
 
         .hero-content {
             max-width: 800px;
+            z-index: 10;
+            position: relative;
         }
 
         .hero h1 {
             font-size: 56px;
             margin-bottom: 20px;
             font-weight: 700;
+            margin-top: 0;
         }
 
         .hero-tagline {
@@ -172,31 +175,33 @@
 
         /* Services Section */
         .services-section {
-            padding: 80px 20px;
+            padding: 70px 20px;
             background: var(--light-gray);
         }
 
         .section-title {
-            font-size: 42px;
+            font-size: 40px;
             text-align: center;
             color: var(--ocean-blue);
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
 
         .service-card {
             background: var(--white);
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 35px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             transition: all 0.3s;
             text-align: center;
+            border-top: 4px solid var(--gold);
         }
 
         .service-card:hover {
@@ -221,77 +226,81 @@
             line-height: 1.7;
         }
 
-        /* Portfolio Section */
-        .portfolio-section {
-            padding: 80px 20px;
+        /* Blog Section */
+        .blog-section {
+            padding: 70px 20px;
             background: var(--white);
         }
 
-        .portfolio-grid {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .portfolio-card {
+        .blog-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
 
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        .blog-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
-        .portfolio-image {
+        .blog-image {
             width: 100%;
-            height: 300px;
+            height: 180px;
             background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
             overflow: hidden;
         }
 
-        .portfolio-image img {
+        .blog-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
         }
 
-        .portfolio-card:hover .portfolio-image img {
-            transform: scale(1.05);
+        .blog-card:hover .blog-image img {
+            transform: scale(1.08);
         }
 
-        .portfolio-content {
-            padding: 30px;
+        .blog-content {
+            display: none;
         }
 
-        .portfolio-title {
-            font-size: 20px;
+        .blog-title {
+            font-size: 18px;
             color: var(--ocean-blue);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
+            line-height: 1.4;
         }
 
-        .portfolio-category {
+        .blog-category {
             color: var(--gold);
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
 
-        .portfolio-description {
+        .blog-description {
             color: var(--text-gray);
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
         }
 
         /* About Section */
         .about-section {
-            padding: 80px 20px;
+            padding: 70px 20px;
             background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
             color: var(--white);
         }
@@ -299,7 +308,7 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
             align-items: center;
         }
 
@@ -334,15 +343,15 @@
 
         /* Contact Section */
         .contact-section {
-            padding: 80px 20px;
+            padding: 70px 20px;
             background: var(--light-gray);
         }
 
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1000px;
+            gap: 50px;
+            max-width: 1100px;
             margin: 0 auto;
             align-items: start;
         }
@@ -372,13 +381,14 @@
 
         .contact-form {
             background: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 38px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--gold);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
@@ -462,11 +472,16 @@
 
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 20px;
             }
 
-            .portfolio-grid {
-                grid-template-columns: 1fr;
+            .blog-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            .blog-image {
+                height: 150px;
             }
 
             .about-content {
@@ -510,7 +525,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -519,7 +534,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>TJB Legacy Construction Group</h1>
+            <h1>TJB Legacy Construction Group ✓</h1>
             <div class="hero-tagline">ADDITIONS • KITCHENS • BATHROOMS • DECKS • RENOVATIONS</div>
             <p>Premium Construction & Renovation Services<br>Licensed & Insured • NJ's Trusted Choice<br>Call Today: <strong>201-787-1258</strong></p>
             <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
@@ -565,57 +580,57 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section" id="portfolio">
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
         <div class="container">
-            <h2 class="section-title">Project Portfolio</h2>
+            <h2 class="section-title">Project Blog</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project1.jpg" alt="Professional Basement Renovation"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Basement Renovation</div>
-                        <h3 class="portfolio-title">Professional Basement Addition</h3>
-                        <p class="portfolio-description">Complete basement renovation with professional finishing, including stairs, lighting, and climate control.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Basement Renovation</div>
+                        <h3 class="blog-title">Professional Basement Addition</h3>
+                        <p class="blog-description">Complete basement renovation with professional finishing, including stairs, lighting, and climate control.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project2.jpg" alt="Kitchen Remodel"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Kitchen Remodel</div>
-                        <h3 class="portfolio-title">Modern Kitchen Renovation</h3>
-                        <p class="portfolio-description">Luxury kitchen redesign with premium appliances, custom cabinetry, and professional finishes.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Kitchen Remodel</div>
+                        <h3 class="blog-title">Modern Kitchen Renovation</h3>
+                        <p class="blog-description">Luxury kitchen redesign with premium appliances, custom cabinetry, and professional finishes.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project3.jpg" alt="Bathroom Design"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Bathroom Remodel</div>
-                        <h3 class="portfolio-title">Contemporary Bathroom</h3>
-                        <p class="portfolio-description">Upscale bathroom renovation featuring modern fixtures, elegant tiling, and spa-like amenities.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Bathroom Remodel</div>
+                        <h3 class="blog-title">Contemporary Bathroom</h3>
+                        <p class="blog-description">Upscale bathroom renovation featuring modern fixtures, elegant tiling, and spa-like amenities.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project4.jpg" alt="Home Addition"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Home Addition</div>
-                        <h3 class="portfolio-title">Residential Expansion</h3>
-                        <p class="portfolio-description">Multi-room addition seamlessly integrated with existing structure for expanded living space.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Home Addition</div>
+                        <h3 class="blog-title">Residential Expansion</h3>
+                        <p class="blog-description">Multi-room addition seamlessly integrated with existing structure for expanded living space.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project5.jpg" alt="Commercial Project"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Commercial Work</div>
-                        <h3 class="portfolio-title">Commercial Renovation</h3>
-                        <p class="portfolio-description">Large-scale commercial project featuring structural work, HVAC, and professional finishes.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Commercial Work</div>
+                        <h3 class="blog-title">Commercial Renovation</h3>
+                        <p class="blog-description">Large-scale commercial project featuring structural work, HVAC, and professional finishes.</p>
                     </div>
                 </div>
                 <div class="portfolio-card">
                     <div class="portfolio-image"><img src="project6.jpg" alt="Deck Construction"></div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-category">Deck Construction</div>
-                        <h3 class="portfolio-title">Premium Deck Build</h3>
-                        <p class="portfolio-description">Custom-designed outdoor deck with professional landscaping and professional-grade materials.</p>
+                    <div class="blog-content">
+                        <div class="blog-category">Deck Construction</div>
+                        <h3 class="blog-title">Premium Deck Build</h3>
+                        <p class="blog-description">Custom-designed outdoor deck with professional landscaping and professional-grade materials.</p>
                     </div>
                 </div>
             </div>
