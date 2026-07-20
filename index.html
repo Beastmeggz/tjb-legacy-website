@@ -109,45 +109,43 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 58, 82, 0.6) 0%, rgba(45, 90, 122, 0.6) 100%), url('crane-hero.jpg') center/cover no-repeat;
-            background-attachment: fixed;
-            color: var(--white);
-            padding: 140px 20px 100px;
+            background: linear-gradient(to bottom, rgba(26, 58, 82, 0.7), rgba(45, 90, 122, 0.7)), url('crane-hero.jpg') center/cover no-repeat;
+            color: white;
+            padding: 120px 20px;
             text-align: center;
-            position: relative;
-            min-height: 550px;
+            min-height: 500px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            z-index: 10;
-            position: relative;
+            gap: 20px;
         }
 
         .hero h1 {
-            font-size: 52px;
-            margin: 0 0 15px 0;
+            font-size: 50px;
             font-weight: 800;
+            margin: 0;
             line-height: 1.2;
-            letter-spacing: -1px;
         }
 
-        .hero-tagline {
-            font-size: 20px;
-            margin-bottom: 25px;
+        .hero-subtitle {
+            font-size: 18px;
             color: var(--gold);
             font-weight: 700;
+            margin: 0;
             letter-spacing: 0.5px;
         }
 
-        .hero p {
+        .hero-description {
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .hero-phone {
             font-size: 16px;
-            margin-bottom: 35px;
-            opacity: 0.9;
-            line-height: 1.6;
+            margin: 0;
+            font-weight: 600;
         }
 
         .cta-btn {
@@ -536,12 +534,11 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>TJB Legacy Construction Group</h1>
-            <div class="hero-tagline">ADDITIONS • KITCHENS • BATHROOMS • DECKS • RENOVATIONS</div>
-            <p>Premium Construction & Renovation Services<br>Licensed & Insured • NJ's Trusted Choice<br>Call Today: <strong>201-787-1258</strong></p>
-            <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
-        </div>
+        <h1>TJB Legacy Construction Group</h1>
+        <p class="hero-subtitle">ADDITIONS • KITCHENS • BATHROOMS • DECKS • RENOVATIONS</p>
+        <p class="hero-description">Premium Construction & Renovation Services<br>Licensed & Insured • NJ's Trusted Choice</p>
+        <p class="hero-phone"><strong>201-787-1258</strong></p>
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
     </section>
 
     <!-- Services Section -->
