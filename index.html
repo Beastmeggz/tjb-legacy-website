@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJB Legacy Construction Group - Professional Construction & Renovations NJ</title>
+    <meta name="description" content="Premium construction and renovation services in New Jersey. Additions, kitchens, bathrooms, decks, and home renovations. HGTV Featured. Licensed & Insured.">
+
+    <!-- Open Graph for Text Preview -->
+    <meta property="og:title" content="TJB Legacy Construction Group">
+    <meta property="og:description" content="Professional construction & renovations. Additions • Kitchens • Bathrooms • Decks. Premium quality. Licensed NJ Contractor #34EB018170900">
+    <meta property="og:image" content="https://tjb-legacy.vercel.app/hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tjb-legacy.vercel.app">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ocean-blue: #1a3a52;
+            --light-blue: #2d5a7a;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --text-gray: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-gray);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--ocean-blue);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-main {
+            font-size: 16px;
+        }
+
+        .logo-sub {
+            font-size: 11px;
+            color: var(--light-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 14px;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.7) 0%, rgba(45, 90, 122, 0.7) 100%), url('hero.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-tagline {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--ocean-blue);
+            padding: 15px 45px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 20px;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 42px;
+            text-align: center;
+            color: var(--ocean-blue);
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--ocean-blue);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
+            overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 30px;
+        }
+
+        .portfolio-title {
+            font-size: 20px;
+            color: var(--ocean-blue);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .portfolio-category {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-description {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
+            color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .credentials {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .credential-item {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .credential-label {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            background: var(--light-gray);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            color: var(--ocean-blue);
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+        }
+
+        .contact-item-label {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .contact-item-text {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--ocean-blue);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--ocean-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ocean-blue);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-tagline {
+                font-size: 18px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-text h2 {
+                font-size: 28px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            nav ul {
+                gap: 0.8rem;
+            }
+
+            .logo-main {
+                font-size: 14px;
+            }
+
+            .logo-sub {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-text">
+                    <div class="logo-main">🦁 Legacy</div>
+                    <div class="logo-sub">Construction Group</div>
+                </div>
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>TJB Legacy Construction Group</h1>
+            <div class="hero-tagline">ADDITIONS • KITCHENS • BATHROOMS • DECKS • RENOVATIONS</div>
+            <p>Premium Construction & Renovation Services<br>Licensed & Insured • NJ's Trusted Choice<br>Call Today: <strong>201-787-1258</strong></p>
+            <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Home Additions</h3>
+                    <p>Expand your living space with custom-designed additions that seamlessly blend with your existing home.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍🍳</div>
+                    <h3>Kitchen Remodels</h3>
+                    <p>Transform your kitchen into a modern, functional space with premium finishes and expert craftsmanship.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛁</div>
+                    <h3>Bathroom Remodels</h3>
+                    <p>Create your dream bathroom with luxurious fixtures, quality materials, and professional installation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Deck Construction</h3>
+                    <p>Build beautiful outdoor living spaces with durable, professionally designed and built decks.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>General Renovations</h3>
+                    <p>Complete home renovation services including plumbing, electrical, and structural work.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Design Consultation</h3>
+                    <p>Expert design guidance to bring your vision to life with architectural precision and aesthetic appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Project Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project1.jpg" alt="Professional Basement Renovation"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Basement Renovation</div>
+                        <h3 class="portfolio-title">Professional Basement Addition</h3>
+                        <p class="portfolio-description">Complete basement renovation with professional finishing, including stairs, lighting, and climate control.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project2.jpg" alt="Kitchen Remodel"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Kitchen Remodel</div>
+                        <h3 class="portfolio-title">Modern Kitchen Renovation</h3>
+                        <p class="portfolio-description">Luxury kitchen redesign with premium appliances, custom cabinetry, and professional finishes.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project3.jpg" alt="Bathroom Design"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Bathroom Remodel</div>
+                        <h3 class="portfolio-title">Contemporary Bathroom</h3>
+                        <p class="portfolio-description">Upscale bathroom renovation featuring modern fixtures, elegant tiling, and spa-like amenities.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project4.jpg" alt="Home Addition"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Home Addition</div>
+                        <h3 class="portfolio-title">Residential Expansion</h3>
+                        <p class="portfolio-description">Multi-room addition seamlessly integrated with existing structure for expanded living space.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project5.jpg" alt="Commercial Project"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Commercial Work</div>
+                        <h3 class="portfolio-title">Commercial Renovation</h3>
+                        <p class="portfolio-description">Large-scale commercial project featuring structural work, HVAC, and professional finishes.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image"><img src="project6.jpg" alt="Deck Construction"></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Deck Construction</div>
+                        <h3 class="portfolio-title">Premium Deck Build</h3>
+                        <p class="portfolio-description">Custom-designed outdoor deck with professional landscaping and professional-grade materials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose TJB Legacy?</h2>
+                    <p><strong>Seamless Communication & Budget Management</strong><br>
+We keep you informed every step of the way with transparent pricing and clear timelines.</p>
+                    <p><strong>Quality Handiwork Guaranteed</strong><br>
+Our team of licensed professionals delivers premium craftsmanship on every project.</p>
+                    <p><strong>Complete Project Management</strong><br>
+From architectural plans to permits to final inspection—we handle everything.</p>
+                    <p><strong>HGTV Featured Contractor</strong><br>
+Featured on HGTV's "Hot Mess House" Season 2, showcasing our expertise in transformations.</p>
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <span class="credential-label">NJ Home Improvement Contractor:</span><br>
+                            License #13VH11174200
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-label">Electrical License:</span><br>
+                            #34EB018170900
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-label">Plumbing License:</span><br>
+                            #8706
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-label">Phone:</span><br>
+                            201-787-1258
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="team.jpg" alt="TJB Legacy Team" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-label">Phone</div>
+                        <div class="contact-item-text"><strong>201-787-1258</strong></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-label">Website</div>
+                        <div class="contact-item-text">THETJBLEGACYGROUP.COM</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-label">Service Area</div>
+                        <div class="contact-item-text">Northern New Jersey</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-label">Hours</div>
+                        <div class="contact-item-text">Monday - Friday: 8AM - 6PM<br>Saturday: 9AM - 4PM</div>
+                    </div>
+                    <div class="contact-item" style="margin-top: 40px;">
+                        <div class="contact-item-label">Follow Us</div>
+                        <div class="social-links" style="margin-top: 15px;">
+                            <a href="https://www.facebook.com/TheLegacyConstructionGroup">Facebook</a>
+                            <a href="https://www.instagram.com/thelegacygroupp/">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="(201) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Project Type</label>
+                        <input type="text" placeholder="e.g., Kitchen Remodel, Addition">
+                    </div>
+                    <div class="form-group">
+                        <label>Project Details</label>
+                        <textarea placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn" style="width: 100%;">Request Free Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TJB Legacy Construction Group. All rights reserved.</p>
+            <p>Licensed NJ Home Improvement Contractor • Electrical & Plumbing Licensed</p>
+            <p>Premium Construction & Renovation Services in Northern New Jersey</p>
+        </div>
+    </footer>
+</body>
+</html>
