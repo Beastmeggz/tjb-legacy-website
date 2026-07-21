@@ -3,745 +3,723 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TJB Legacy Construction Group - Professional Construction & Renovations NJ</title>
-    <meta name="description" content="Premium construction and renovation services in New Jersey. Additions, kitchens, bathrooms, decks, and home renovations. HGTV Featured. Licensed & Insured.">
+    <title>TJB Legacy Construction Group | Premium Renovations in Northern New Jersey</title>
+    <meta name="description" content="TJB Legacy Construction Group — premium construction & renovation in Northern NJ. Additions, kitchens, bathrooms, basements, decks & full home remodels. HGTV Featured. Licensed & Insured. Free estimates: 201-787-1258.">
 
-    <!-- Open Graph for Text Preview -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
     <meta property="og:title" content="TJB Legacy Construction Group">
-    <meta property="og:description" content="Professional construction & renovations. Additions • Kitchens • Bathrooms • Decks. Premium quality. Licensed NJ Contractor #34EB018170900">
-    <meta property="og:image" content="https://tjb-legacy-website.vercel.app/project5.jpg">
+    <meta property="og:description" content="Premium construction & renovation in Northern NJ. Additions • Kitchens • Bathrooms • Basements • Decks. HGTV Featured. Licensed & Insured. Call 201-787-1258.">
+    <meta property="og:image" content="https://tjb-legacy-website.vercel.app/img/ba-exterior.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://tjb-legacy.vercel.app">
+    <meta property="og:url" content="https://thetjblegacygroup.com">
+
+    <link rel="icon" href="img/logo-crest.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --ocean-blue: #1a3a52;
-            --light-blue: #2d5a7a;
-            --gold: #D4AF37;
-            --white: #FFFFFF;
-            --light-gray: #F5F5F5;
-            --text-gray: #333333;
+            --black: #0a0a0c;
+            --charcoal: #16161a;
+            --charcoal-2: #1e1e24;
+            --gold: #d4af37;
+            --gold-light: #ecc964;
+            --gold-deep: #b8942a;
+            --cream: #f7f4ee;
+            --white: #ffffff;
+            --ink: #1b1b1e;
+            --muted: #6d6d75;
+            --line: rgba(212,175,55,0.25);
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-gray);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.65;
+            color: var(--ink);
             background: var(--white);
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation */
-        nav {
-            background: var(--ocean-blue);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+        h1, h2, h3, .display { font-family: 'Playfair Display', Georgia, serif; }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-        .logo {
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--gold);
-            text-decoration: none;
-            display: flex;
+        .eyebrow {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold-deep);
+            margin-bottom: 14px;
+        }
+        .eyebrow.on-dark { color: var(--gold); }
+
+        .btn {
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-
-        .logo-main {
-            font-size: 16px;
-        }
-
-        .logo-sub {
-            font-size: 11px;
-            color: var(--light-blue);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--white);
+            padding: 15px 34px;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-            }
-            nav a {
-                font-size: 14px;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to bottom, rgba(26, 58, 82, 0.7), rgba(45, 90, 122, 0.7)), url('crane-hero.jpg') center/cover no-repeat;
-            color: white;
-            padding: 120px 20px;
-            text-align: center;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .hero h1 {
-            font-size: 50px;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: var(--gold);
             font-weight: 700;
-            margin: 0;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-description {
             font-size: 15px;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .hero-phone {
-            font-size: 16px;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--ocean-blue);
-            padding: 15px 45px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s;
-            border: none;
+            letter-spacing: 0.4px;
             cursor: pointer;
+            border: none;
+            transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
         }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            color: #211a04;
         }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Services Section */
-        .services-section {
-            padding: 70px 20px;
-            background: var(--light-gray);
-        }
-
-        .section-title {
-            font-size: 40px;
-            text-align: center;
-            color: var(--ocean-blue);
-            margin-bottom: 50px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 35px 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            text-align: center;
-            border-top: 4px solid var(--gold);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .service-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            color: var(--ocean-blue);
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            color: var(--text-gray);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* Blog Section */
-        .blog-section {
-            padding: 70px 20px;
-            background: var(--white);
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .blog-card {
-            background: var(--white);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
-            overflow: hidden;
-        }
-
-        .blog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover .blog-image img {
-            transform: scale(1.08);
-        }
-
-        .blog-content {
-            display: none;
-        }
-
-        .blog-title {
-            font-size: 18px;
-            color: var(--ocean-blue);
-            margin-bottom: 8px;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .blog-category {
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .blog-description {
-            color: var(--text-gray);
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 70px 20px;
-            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--light-blue) 100%);
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(212,175,55,0.35); }
+        .btn-outline {
+            background: transparent;
             color: var(--white);
+            border: 1.5px solid rgba(255,255,255,0.55);
         }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        /* ===== NAV ===== */
+        nav {
+            background: rgba(10,10,12,0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+            position: sticky; top: 0; z-index: 200;
         }
-
-        .about-text h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+            display: flex; align-items: center; justify-content: space-between;
         }
-
-        .about-text p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            opacity: 0.95;
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand img { height: 44px; width: auto; display: block; }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+        .brand-name { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 18px; color: var(--gold); letter-spacing: 0.5px; }
+        .brand-sub { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+        .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 15px; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-phone {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--gold); color: #211a04; padding: 10px 20px; border-radius: 4px;
+            font-weight: 700; font-size: 14px; text-decoration: none; transition: transform .2s;
         }
+        .nav-phone:hover { transform: translateY(-2px); }
+        .nav-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 26px; cursor: pointer; }
 
-        .credentials {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .credential-item {
-            margin-bottom: 15px;
-            font-size: 15px;
-        }
-
-        .credential-label {
-            color: var(--gold);
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 70px 20px;
-            background: var(--light-gray);
-        }
-
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            max-width: 1100px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        .contact-info h3 {
-            color: var(--ocean-blue);
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            margin-bottom: 25px;
-        }
-
-        .contact-item-label {
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .contact-item-text {
-            color: var(--text-gray);
-            font-size: 16px;
-        }
-
-        .contact-form {
-            background: var(--white);
-            padding: 38px;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--gold);
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--ocean-blue);
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--ocean-blue);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--ocean-blue);
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex; align-items: center;
             color: var(--white);
-            padding: 40px 20px;
-            text-align: center;
+            background:
+                linear-gradient(180deg, rgba(10,10,12,0.78) 0%, rgba(10,10,12,0.55) 45%, rgba(10,10,12,0.85) 100%),
+                url('img/hero-home.jpg') center 35%/cover no-repeat;
+        }
+        .hero-inner { max-width: 1200px; margin: 0 auto; padding: 90px 24px; width: 100%; }
+        .hero-crest { height: 120px; width: auto; margin-bottom: 24px; filter: drop-shadow(0 6px 20px rgba(0,0,0,0.6)); }
+        .hero h1 { font-size: clamp(38px, 6vw, 72px); font-weight: 800; line-height: 1.05; letter-spacing: -1px; max-width: 15ch; }
+        .hero h1 .accent { color: var(--gold); }
+        .hero-tag { margin-top: 18px; font-size: clamp(15px, 2vw, 19px); letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); font-weight: 600; }
+        .hero-desc { margin-top: 20px; font-size: 18px; max-width: 54ch; color: rgba(255,255,255,0.9); }
+        .hero-cta { margin-top: 34px; display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-badges { margin-top: 42px; display: flex; flex-wrap: wrap; gap: 14px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16);
+            backdrop-filter: blur(4px);
+            padding: 9px 16px; border-radius: 40px; font-size: 13px; font-weight: 600; letter-spacing: 0.4px;
+        }
+        .hero-badge .dot { color: var(--gold); font-size: 15px; }
+
+        /* ===== TRUST STRIP ===== */
+        .trust-strip { background: var(--gold); color: #211a04; }
+        .trust-strip .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 42px; padding-top: 16px; padding-bottom: 16px; text-align: center; }
+        .trust-strip span { font-weight: 700; font-size: 14px; letter-spacing: 0.5px; }
+        .trust-strip b { font-weight: 800; }
+
+        /* ===== SECTION SHELL ===== */
+        section { scroll-margin-top: 74px; }
+        .section-pad { padding: 96px 0; }
+        .section-head { text-align: center; max-width: 720px; margin: 0 auto 58px; }
+        .section-head h2 { font-size: clamp(30px, 4.5vw, 46px); font-weight: 800; line-height: 1.1; color: var(--ink); letter-spacing: -0.5px; }
+        .section-head.on-dark h2 { color: var(--white); }
+        .section-head p { margin-top: 16px; font-size: 17px; color: var(--muted); }
+        .section-head.on-dark p { color: rgba(255,255,255,0.72); }
+        .gold-rule { width: 66px; height: 3px; background: var(--gold); margin: 18px auto 0; border-radius: 3px; }
+
+        /* ===== SERVICES ===== */
+        .services { background: var(--cream); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+        .svc-card {
+            background: var(--white); border-radius: 10px; padding: 40px 30px;
+            border: 1px solid #ece7dc; border-top: 3px solid var(--gold);
+            box-shadow: 0 2px 14px rgba(0,0,0,0.04); transition: transform .3s, box-shadow .3s;
+        }
+        .svc-card:hover { transform: translateY(-8px); box-shadow: 0 22px 44px rgba(0,0,0,0.12); }
+        .svc-ico { width: 58px; height: 58px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #22222a, #0d0d10); color: var(--gold); font-size: 26px; margin-bottom: 22px; }
+        .svc-card h3 { font-size: 22px; color: var(--ink); margin-bottom: 10px; }
+        .svc-card p { font-size: 15px; color: var(--muted); }
+
+        /* ===== SHOWCASE / TRANSFORMATIONS ===== */
+        .showcase { background: var(--black); color: var(--white); }
+        .ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .ba-card { position: relative; border-radius: 12px; overflow: hidden; cursor: pointer; border: 1px solid rgba(212,175,55,0.22); }
+        .ba-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+        .ba-card:hover img { transform: scale(1.05); }
+        .ba-tag {
+            position: absolute; top: 16px; left: 16px; z-index: 2;
+            background: var(--gold); color: #211a04; font-size: 12px; font-weight: 800;
+            letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 30px;
+        }
+        .ba-cap {
+            position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+            padding: 40px 20px 18px; font-weight: 700; font-size: 18px;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.85));
         }
 
-        .social-links {
-            margin: 20px 0;
+        /* ===== GALLERY ===== */
+        .gallery { background: var(--white); }
+        .gal-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 16px; }
+        .gal-item { position: relative; overflow: hidden; border-radius: 10px; cursor: pointer; }
+        .gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+        .gal-item:hover img { transform: scale(1.07); }
+        .gal-item::after {
+            content: attr(data-label); position: absolute; left: 0; right: 0; bottom: 0;
+            padding: 26px 16px 14px; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 0.4px;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8)); opacity: 0; transition: opacity .3s;
         }
+        .gal-item:hover::after { opacity: 1; }
+        .gal-tall { grid-row: span 2; }
+        .gal-wide { grid-column: span 2; }
 
-        .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+        /* ===== STATS ===== */
+        .stats { background: linear-gradient(135deg, #16161a, #0a0a0c); color: var(--white); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+        .stat .num { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--gold); line-height: 1; }
+        .stat .lbl { margin-top: 10px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+
+        /* ===== ABOUT / OWNER ===== */
+        .about { background: var(--cream); }
+        .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 60px; align-items: center; }
+        .about-photo { position: relative; }
+        .about-photo img { width: 100%; border-radius: 14px; box-shadow: 0 24px 50px rgba(0,0,0,0.22); display: block; }
+        .about-photo .stamp {
+            position: absolute; bottom: -22px; right: -12px; background: var(--black); color: var(--gold);
+            padding: 16px 22px; border-radius: 12px; border: 1px solid var(--line); text-align: center; box-shadow: 0 12px 30px rgba(0,0,0,0.25);
         }
+        .about-photo .stamp b { display: block; font-family: 'Playfair Display', serif; font-size: 26px; }
+        .about-photo .stamp span { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+        .about-text h2 { font-size: clamp(28px, 4vw, 42px); color: var(--ink); line-height: 1.12; margin-bottom: 8px; }
+        .about-text > p { color: #4a4a50; font-size: 16.5px; margin-top: 18px; }
+        .creds { margin-top: 30px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .cred { background: var(--white); border: 1px solid #eae4d8; border-left: 3px solid var(--gold); border-radius: 8px; padding: 14px 16px; }
+        .cred .k { font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
+        .cred .v { font-size: 15px; font-weight: 600; color: var(--ink); }
 
-        .social-links a:hover {
-            color: var(--white);
+        /* ===== TESTIMONIALS ===== */
+        .reviews { background: var(--white); }
+        .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .rev-card { background: var(--cream); border-radius: 12px; padding: 32px 28px; border: 1px solid #ece7dc; }
+        .rev-stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; margin-bottom: 14px; }
+        .rev-card p { font-size: 16px; color: #3f3f45; font-style: italic; }
+        .rev-who { margin-top: 18px; font-weight: 700; color: var(--ink); font-size: 15px; }
+        .rev-who span { display: block; font-weight: 500; font-size: 13px; color: var(--muted); font-style: normal; }
+
+        /* ===== CTA BAND ===== */
+        .cta-band {
+            position: relative; color: #fff; text-align: center;
+            background: linear-gradient(rgba(10,10,12,0.82), rgba(10,10,12,0.88)), url('img/cta-silhouette.jpg') center/cover no-repeat;
         }
+        .cta-band .container { padding: 90px 24px; }
+        .cta-band h2 { font-size: clamp(30px, 5vw, 50px); font-weight: 800; }
+        .cta-band p { margin-top: 14px; font-size: 18px; color: rgba(255,255,255,0.85); }
+        .cta-band .phone-big { margin-top: 26px; font-family: 'Playfair Display', serif; font-size: clamp(30px, 6vw, 48px); color: var(--gold); font-weight: 800; text-decoration: none; display: inline-block; }
+        .cta-band .btn { margin-top: 26px; }
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px;
-                min-height: 400px;
-            }
+        /* ===== CONTACT ===== */
+        .contact { background: var(--charcoal); color: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 54px; align-items: start; }
+        .contact-info h3 { font-size: 30px; margin-bottom: 8px; }
+        .contact-info > p { color: rgba(255,255,255,0.7); margin-bottom: 26px; }
+        .ci-row { display: flex; gap: 14px; margin-bottom: 22px; align-items: flex-start; }
+        .ci-ico { flex: none; width: 44px; height: 44px; border-radius: 10px; background: rgba(212,175,55,0.14); color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .ci-row .k { font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+        .ci-row .v { font-size: 16.5px; font-weight: 600; }
+        .ci-row .v a { color: #fff; text-decoration: none; }
+        .socials { display: flex; gap: 14px; margin-top: 30px; }
+        .socials a { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); color: var(--gold); padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all .2s; }
+        .socials a:hover { background: var(--gold); color: #211a04; border-color: var(--gold); }
 
-            .hero h1 {
-                font-size: 36px;
-            }
+        .form-card { background: var(--white); border-radius: 14px; padding: 38px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-top: 4px solid var(--gold); }
+        .form-card h4 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--ink); margin-bottom: 6px; }
+        .form-card .sub { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
+        .fg { margin-bottom: 16px; }
+        .fg label { display: block; font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+        .fg input, .fg select, .fg textarea {
+            width: 100%; padding: 12px 14px; border: 1px solid #d9d9de; border-radius: 7px;
+            font-family: inherit; font-size: 15px; color: var(--ink); transition: border-color .2s, box-shadow .2s; background: #fff;
+        }
+        .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,175,55,0.18); }
+        .fg textarea { resize: vertical; min-height: 110px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
 
-            .hero-tagline {
-                font-size: 18px;
-            }
+        /* ===== FOOTER ===== */
+        footer { background: var(--black); color: rgba(255,255,255,0.72); padding: 56px 0 30px; border-top: 1px solid var(--line); }
+        .foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; align-items: flex-start; padding-bottom: 34px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .foot-brand { display: flex; align-items: center; gap: 14px; }
+        .foot-brand img { height: 58px; }
+        .foot-brand .fb-name { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--gold); font-weight: 800; }
+        .foot-brand .fb-sub { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .foot-links { display: flex; gap: 40px; flex-wrap: wrap; }
+        .foot-col h5 { color: #fff; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        .foot-col a, .foot-col p { display: block; color: rgba(255,255,255,0.68); text-decoration: none; font-size: 14px; margin-bottom: 8px; }
+        .foot-col a:hover { color: var(--gold); }
+        .foot-bottom { text-align: center; padding-top: 24px; font-size: 13px; color: rgba(255,255,255,0.5); }
+        .foot-bottom .lic { color: var(--gold); }
 
-            .hero p {
-                font-size: 16px;
-            }
+        /* ===== LIGHTBOX ===== */
+        .lb { position: fixed; inset: 0; background: rgba(6,6,8,0.94); display: none; align-items: center; justify-content: center; z-index: 999; padding: 30px; }
+        .lb.open { display: flex; }
+        .lb img { max-width: 92vw; max-height: 88vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+        .lb-close { position: absolute; top: 22px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; line-height: 1; background: none; border: none; }
+        .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 44px; cursor: pointer; background: none; border: none; padding: 10px 18px; user-select: none; opacity: 0.75; transition: opacity .2s; }
+        .lb-nav:hover { opacity: 1; color: var(--gold); }
+        .lb-prev { left: 12px; } .lb-next { right: 12px; }
 
-            .section-title {
-                font-size: 32px;
-                margin-bottom: 40px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .blog-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 12px;
-            }
-
-            .blog-image {
-                height: 150px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-text h2 {
-                font-size: 28px;
-            }
-
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            nav ul {
-                gap: 0.8rem;
-            }
-
-            .logo-main {
-                font-size: 14px;
-            }
-
-            .logo-sub {
-                font-size: 10px;
-            }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 980px) {
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-photo { max-width: 420px; margin: 0 auto; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .gal-grid { grid-template-columns: repeat(3, 1fr); }
+            .rev-grid { grid-template-columns: 1fr; }
+            .cta-band { background-attachment: scroll; }
+        }
+        @media (max-width: 760px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--black); flex-direction: column; gap: 0; padding: 8px 0; border-bottom: 1px solid var(--line); }
+            .nav-links.show { display: flex; }
+            .nav-links li { width: 100%; text-align: center; }
+            .nav-links a { display: block; padding: 14px; }
+            .nav-toggle { display: block; }
+            .nav-phone { display: none; }
+            .section-pad { padding: 68px 0; }
+            .services-grid { grid-template-columns: 1fr; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .gal-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 16px; }
+            .creds { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero { min-height: 82vh; }
+            .hero-crest { height: 92px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ===== NAV ===== -->
     <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-text">
-                    <div class="logo-main">🦁 Legacy</div>
-                    <div class="logo-sub">Construction Group</div>
-                </div>
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <img src="img/logo-crest.png" alt="TJB Legacy Construction Group crest">
+                <span class="brand-text">
+                    <span class="brand-name">TJB Legacy</span>
+                    <span class="brand-sub">Construction Group</span>
+                </span>
             </a>
-            <ul>
-                <li><a href="#home">Home</a></li>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="tel:2017871258" class="nav-phone">📞 201-787-1258</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>TJB Legacy Construction Group</h1>
-        <p class="hero-subtitle">ADDITIONS • KITCHENS • BATHROOMS • DECKS • RENOVATIONS</p>
-        <p class="hero-description">Premium Construction & Renovation Services<br>Licensed & Insured • NJ's Trusted Choice</p>
-        <p class="hero-phone"><strong>201-787-1258</strong></p>
-        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Free Quote</button>
-    </section>
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="home">
+        <div class="hero-inner">
+            <img src="img/logo-crest.png" alt="TJB Legacy crest" class="hero-crest">
+            <h1>Building Your <span class="accent">Legacy</span>, One Home at a Time.</h1>
+            <p class="hero-tag">Additions · Kitchens · Bathrooms · Basements · Decks</p>
+            <p class="hero-desc">Premium construction & renovation across Northern New Jersey. Master craftsmanship, transparent pricing, and a finish you'll be proud of for decades.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-gold">Get Your Free Estimate</a>
+                <a href="tel:2017871258" class="btn btn-outline">📞 Call 201-787-1258</a>
+            </div>
+            <div class="hero-badges">
+                <span class="hero-badge"><span class="dot">✦</span> Licensed &amp; Insured</span>
+                <span class="hero-badge"><span class="dot">✦</span> HGTV Featured</span>
+                <span class="hero-badge"><span class="dot">✦</span> Electrical &amp; Plumbing Licensed</span>
+                <span class="hero-badge"><span class="dot">✦</span> Free Estimates</span>
+            </div>
+        </div>
+    </header>
 
-    <!-- Services Section -->
-    <section class="services-section" id="services">
+    <!-- ===== TRUST STRIP ===== -->
+    <div class="trust-strip">
         <div class="container">
-            <h2 class="section-title">Our Premium Services</h2>
+            <span>⭐ <b>HGTV "Hot Mess House"</b> Featured Contractor</span>
+            <span>🛡️ NJ HIC <b>#13VH11174200</b></span>
+            <span>⚡ Electrical <b>#34EB018170900</b></span>
+            <span>🔧 Plumbing <b>#8706</b></span>
+        </div>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services section-pad" id="services">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">What We Do</div>
+                <h2>Premium Craftsmanship, Full Service</h2>
+                <div class="gold-rule"></div>
+                <p>From a single room to a full home transformation — one licensed team handling design, permits, build, and final inspection.</p>
+            </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
+                <div class="svc-card">
+                    <div class="svc-ico">🏗️</div>
                     <h3>Home Additions</h3>
-                    <p>Expand your living space with custom-designed additions that seamlessly blend with your existing home.</p>
+                    <p>Add square footage that looks original to the home — second stories, extensions, in-law suites and dormers.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">👨‍🍳</div>
+                <div class="svc-card">
+                    <div class="svc-ico">🍳</div>
                     <h3>Kitchen Remodels</h3>
-                    <p>Transform your kitchen into a modern, functional space with premium finishes and expert craftsmanship.</p>
+                    <p>Custom cabinetry, quartz counters and premium appliances built around how your family actually lives.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛁</div>
+                <div class="svc-card">
+                    <div class="svc-ico">🛁</div>
                     <h3>Bathroom Remodels</h3>
-                    <p>Create your dream bathroom with luxurious fixtures, quality materials, and professional installation.</p>
+                    <p>Spa-quality baths with custom tile, glass showers and elegant fixtures — down to the last grout line.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏡</div>
-                    <h3>Deck Construction</h3>
-                    <p>Build beautiful outdoor living spaces with durable, professionally designed and built decks.</p>
+                <div class="svc-card">
+                    <div class="svc-ico">🏠</div>
+                    <h3>Basement Finishing</h3>
+                    <p>Turn unused space into living space — home theaters, wet bars, gyms and guest suites, fully permitted.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>General Renovations</h3>
-                    <p>Complete home renovation services including plumbing, electrical, and structural work.</p>
+                <div class="svc-card">
+                    <div class="svc-ico">🌳</div>
+                    <h3>Decks &amp; Outdoor</h3>
+                    <p>Composite and hardwood decks, paver walkways, porticos and steps that boost curb appeal instantly.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Design Consultation</h3>
-                    <p>Expert design guidance to bring your vision to life with architectural precision and aesthetic appeal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="blog-section" id="blog">
-        <div class="container">
-            <h2 class="section-title">Project Blog</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project1.jpg" alt="Professional Basement Renovation"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Basement Renovation</div>
-                        <h3 class="blog-title">Professional Basement Addition</h3>
-                        <p class="blog-description">Complete basement renovation with professional finishing, including stairs, lighting, and climate control.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project2.jpg" alt="Kitchen Remodel"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Kitchen Remodel</div>
-                        <h3 class="blog-title">Modern Kitchen Renovation</h3>
-                        <p class="blog-description">Luxury kitchen redesign with premium appliances, custom cabinetry, and professional finishes.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project3.jpg" alt="Bathroom Design"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Bathroom Remodel</div>
-                        <h3 class="blog-title">Contemporary Bathroom</h3>
-                        <p class="blog-description">Upscale bathroom renovation featuring modern fixtures, elegant tiling, and spa-like amenities.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project4.jpg" alt="Home Addition"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Home Addition</div>
-                        <h3 class="blog-title">Residential Expansion</h3>
-                        <p class="blog-description">Multi-room addition seamlessly integrated with existing structure for expanded living space.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project5.jpg" alt="Commercial Project"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Commercial Work</div>
-                        <h3 class="blog-title">Commercial Renovation</h3>
-                        <p class="blog-description">Large-scale commercial project featuring structural work, HVAC, and professional finishes.</p>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="portfolio-image"><img src="project6.jpg" alt="Deck Construction"></div>
-                    <div class="blog-content">
-                        <div class="blog-category">Deck Construction</div>
-                        <h3 class="blog-title">Premium Deck Build</h3>
-                        <p class="blog-description">Custom-designed outdoor deck with professional landscaping and professional-grade materials.</p>
-                    </div>
+                <div class="svc-card">
+                    <div class="svc-ico">🔨</div>
+                    <h3>Full Renovations</h3>
+                    <p>Whole-home remodels including framing, electrical, plumbing and finishing — start to finish, one contractor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- ===== TRANSFORMATIONS ===== -->
+    <section class="showcase section-pad" id="work">
         <div class="container">
-            <div class="about-content">
+            <div class="section-head on-dark">
+                <div class="eyebrow on-dark">Before &amp; After</div>
+                <h2>Real Transformations</h2>
+                <div class="gold-rule"></div>
+                <p>Actual TJB Legacy projects across Northern NJ. Same house — remarkable difference.</p>
+            </div>
+            <div class="ba-grid">
+                <div class="ba-card" data-full="img/ba-exterior.jpg">
+                    <span class="ba-tag">Before → After</span>
+                    <img src="img/ba-exterior.jpg" alt="Full exterior siding and facade transformation">
+                    <div class="ba-cap">Full Exterior &amp; Siding Rebuild</div>
+                </div>
+                <div class="ba-card" data-full="img/ba-entrance.jpg">
+                    <span class="ba-tag">Before → After</span>
+                    <img src="img/ba-entrance.jpg" alt="Front entrance portico transformation">
+                    <div class="ba-cap">Custom Portico &amp; Front Entrance</div>
+                </div>
+                <div class="ba-card" data-full="img/ba-deck.jpg">
+                    <span class="ba-tag">Before → After</span>
+                    <img src="img/ba-deck.jpg" alt="Deck rebuild transformation">
+                    <div class="ba-cap">Multi-Level Deck Rebuild</div>
+                </div>
+                <div class="ba-card" data-full="img/ba-walkway.jpg">
+                    <span class="ba-tag">Before → After</span>
+                    <img src="img/ba-walkway.jpg" alt="Paver walkway transformation">
+                    <div class="ba-cap">Paver Walkway &amp; Landscaping</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery section-pad">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">Portfolio</div>
+                <h2>Recent Work</h2>
+                <div class="gold-rule"></div>
+                <p>A look inside the finished spaces our clients live in every day. Click any photo to enlarge.</p>
+            </div>
+            <div class="gal-grid" id="galGrid">
+                <div class="gal-item gal-tall" data-label="Modern Kitchen Remodel" data-full="img/kitchen.jpg"><img src="img/kitchen.jpg" alt="Modern kitchen remodel"></div>
+                <div class="gal-item gal-wide" data-label="Finished Basement Lounge &amp; Bar" data-full="img/basement-bar.jpg"><img src="img/basement-bar.jpg" alt="Finished basement with bar"></div>
+                <div class="gal-item" data-label="Herringbone Tile Shower" data-full="img/shower-herringbone.jpg"><img src="img/shower-herringbone.jpg" alt="Herringbone tile shower"></div>
+                <div class="gal-item" data-label="Full Bathroom Remodel" data-full="img/bathroom.jpg"><img src="img/bathroom.jpg" alt="Full bathroom remodel"></div>
+                <div class="gal-item gal-wide" data-label="Basement Living Space &amp; Staircase" data-full="img/basement.jpg"><img src="img/basement.jpg" alt="Finished basement staircase"></div>
+                <div class="gal-item" data-label="Marble Walk-In Shower" data-full="img/shower-marble.jpg"><img src="img/shower-marble.jpg" alt="Marble walk-in shower"></div>
+                <div class="gal-item" data-label="Concrete Steps &amp; Railings" data-full="img/steps.jpg"><img src="img/steps.jpg" alt="Concrete steps and railings"></div>
+                <div class="gal-item" data-label="New Construction Framing" data-full="img/framing.jpg"><img src="img/framing.jpg" alt="New construction framing"></div>
+                <div class="gal-item" data-label="Balcony Deck Resurfacing" data-full="img/ba-balcony.jpg"><img src="img/ba-balcony.jpg" alt="Balcony deck resurfacing"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats section-pad">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat"><div class="num" data-count="20">0</div><div class="lbl">Years of Experience</div></div>
+                <div class="stat"><div class="num" data-count="500" data-suffix="+">0</div><div class="lbl">Projects Completed</div></div>
+                <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Licensed &amp; Insured</div></div>
+                <div class="stat"><div class="num" data-count="1" data-prefix="HGTV">HGTV</div><div class="lbl">Featured Contractor</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT / OWNER ===== -->
+    <section class="about section-pad" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-photo">
+                    <img src="img/owner.jpg" alt="TJB Legacy Construction Group owner">
+                    <div class="stamp"><b>TJB</b><span>Legacy Group</span></div>
+                </div>
                 <div class="about-text">
-                    <h2>Why Choose TJB Legacy?</h2>
-                    <p><strong>Seamless Communication & Budget Management</strong><br>
-We keep you informed every step of the way with transparent pricing and clear timelines.</p>
-                    <p><strong>Quality Handiwork Guaranteed</strong><br>
-Our team of licensed professionals delivers premium craftsmanship on every project.</p>
-                    <p><strong>Complete Project Management</strong><br>
-From architectural plans to permits to final inspection—we handle everything.</p>
-                    <p><strong>HGTV Featured Contractor</strong><br>
-Featured on HGTV's "Hot Mess House" Season 2, showcasing our expertise in transformations.</p>
-                    <div class="credentials">
-                        <div class="credential-item">
-                            <span class="credential-label">NJ Home Improvement Contractor:</span><br>
-                            License #13VH11174200
-                        </div>
-                        <div class="credential-item">
-                            <span class="credential-label">Electrical License:</span><br>
-                            #34EB018170900
-                        </div>
-                        <div class="credential-item">
-                            <span class="credential-label">Plumbing License:</span><br>
-                            #8706
-                        </div>
-                        <div class="credential-item">
-                            <span class="credential-label">Phone:</span><br>
-                            201-787-1258
-                        </div>
+                    <div class="eyebrow">Why Homeowners Choose Us</div>
+                    <h2>A Family Name You Can Build On.</h2>
+                    <p>TJB Legacy Construction Group was founded on a simple promise: treat every home like it's our own. We're a hands-on, owner-operated team of licensed professionals serving Northern New Jersey — and we're proud to have been featured on HGTV's <em>"Hot Mess House."</em></p>
+                    <p>From your first estimate to the final walkthrough, you deal with real people who pick up the phone, respect your budget, and stand behind the work. No subcontractor runaround — just clean, code-compliant craftsmanship, on schedule.</p>
+                    <div class="creds">
+                        <div class="cred"><div class="k">NJ Home Improvement</div><div class="v">#13VH11174200</div></div>
+                        <div class="cred"><div class="k">Electrical License</div><div class="v">#34EB018170900</div></div>
+                        <div class="cred"><div class="k">Plumbing License</div><div class="v">#8706</div></div>
+                        <div class="cred"><div class="k">Service Area</div><div class="v">Northern New Jersey</div></div>
                     </div>
-                </div>
-                <div>
-                    <img src="team.jpg" alt="TJB Legacy Team" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <!-- ===== REVIEWS ===== -->
+    <!-- Replace placeholder reviews below with real customer testimonials -->
+    <section class="reviews section-pad" id="reviews">
         <div class="container">
-            <h2 class="section-title">Get Your Free Quote</h2>
-            <div class="contact-wrapper">
+            <div class="section-head">
+                <div class="eyebrow">Testimonials</div>
+                <h2>What Our Clients Say</h2>
+                <div class="gold-rule"></div>
+            </div>
+            <div class="rev-grid">
+                <div class="rev-card">
+                    <div class="rev-stars">★★★★★</div>
+                    <p>"They turned our dated basement into the best room in the house. Communication was constant and the finish work is flawless."</p>
+                    <div class="rev-who">Homeowner<span>Bergen County, NJ</span></div>
+                </div>
+                <div class="rev-card">
+                    <div class="rev-stars">★★★★★</div>
+                    <p>"Kitchen and two bathrooms — done on budget and on time. You can tell they actually care about the details. Highly recommend."</p>
+                    <div class="rev-who">Homeowner<span>Passaic County, NJ</span></div>
+                </div>
+                <div class="rev-card">
+                    <div class="rev-stars">★★★★★</div>
+                    <p>"New portico and paver walkway completely changed our curb appeal. Professional crew, clean job site, great result."</p>
+                    <div class="rev-who">Homeowner<span>Northern NJ</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Ready to Build Your Legacy?</h2>
+            <p>Free, no-pressure estimates across Northern New Jersey.</p>
+            <a href="tel:2017871258" class="phone-big">201-787-1258</a><br>
+            <a href="#contact" class="btn btn-gold">Request Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section-pad" id="contact">
+        <div class="container">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="contact-item-label">Phone</div>
-                        <div class="contact-item-text"><strong>201-787-1258</strong></div>
+                    <div class="eyebrow on-dark">Get In Touch</div>
+                    <h3>Let's Talk About Your Project</h3>
+                    <p>Tell us what you're planning and we'll get right back to you with next steps.</p>
+                    <div class="ci-row">
+                        <div class="ci-ico">📞</div>
+                        <div><div class="k">Phone</div><div class="v"><a href="tel:2017871258">201-787-1258</a></div></div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-item-label">Website</div>
-                        <div class="contact-item-text">THETJBLEGACYGROUP.COM</div>
+                    <div class="ci-row">
+                        <div class="ci-ico">🌐</div>
+                        <div><div class="k">Website</div><div class="v">thetjblegacygroup.com</div></div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-item-label">Service Area</div>
-                        <div class="contact-item-text">Northern New Jersey</div>
+                    <div class="ci-row">
+                        <div class="ci-ico">📍</div>
+                        <div><div class="k">Service Area</div><div class="v">Northern New Jersey</div></div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-item-label">Hours</div>
-                        <div class="contact-item-text">Monday - Friday: 8AM - 6PM<br>Saturday: 9AM - 4PM</div>
+                    <div class="ci-row">
+                        <div class="ci-ico">🕗</div>
+                        <div><div class="k">Hours</div><div class="v">Mon–Fri 8AM–6PM · Sat 9AM–4PM</div></div>
                     </div>
-                    <div class="contact-item" style="margin-top: 40px;">
-                        <div class="contact-item-label">Follow Us</div>
-                        <div class="social-links" style="margin-top: 15px;">
-                            <a href="https://www.facebook.com/TheLegacyConstructionGroup">Facebook</a>
-                            <a href="https://www.instagram.com/thelegacygroupp/">Instagram</a>
-                        </div>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/TheLegacyConstructionGroup" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://www.instagram.com/thelegacygroupp/" target="_blank" rel="noopener">Instagram</a>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Full Name" required>
+
+                <form class="form-card" onsubmit="return handleQuote(event)">
+                    <h4>Request a Free Estimate</h4>
+                    <p class="sub">Fill this out and we'll reach out within one business day.</p>
+                    <div class="form-row">
+                        <div class="fg"><label>Full Name</label><input type="text" name="name" placeholder="Jane Smith" required></div>
+                        <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="(201) 555-0123" required></div>
                     </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="(201) 123-4567" required>
-                    </div>
-                    <div class="form-group">
+                    <div class="fg"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+                    <div class="fg">
                         <label>Project Type</label>
-                        <input type="text" placeholder="e.g., Kitchen Remodel, Addition">
+                        <select name="project">
+                            <option value="">Select a service…</option>
+                            <option>Home Addition</option>
+                            <option>Kitchen Remodel</option>
+                            <option>Bathroom Remodel</option>
+                            <option>Basement Finishing</option>
+                            <option>Deck / Outdoor</option>
+                            <option>Full Renovation</option>
+                            <option>Other</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label>Project Details</label>
-                        <textarea placeholder="Tell us about your project..." required></textarea>
-                    </div>
-                    <button type="submit" class="cta-btn" style="width: 100%;">Request Free Quote</button>
+                    <div class="fg"><label>Project Details</label><textarea name="details" placeholder="Tell us about your project, timeline and rough budget…" required></textarea></div>
+                    <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Send My Request</button>
+                    <p class="form-note">Prefer to talk? Call <strong>201-787-1258</strong> — we answer.</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 TJB Legacy Construction Group. All rights reserved.</p>
-            <p>Licensed NJ Home Improvement Contractor • Electrical & Plumbing Licensed</p>
-            <p>Premium Construction & Renovation Services in Northern New Jersey</p>
+            <div class="foot-top">
+                <div class="foot-brand">
+                    <img src="img/logo-crest.png" alt="TJB Legacy crest">
+                    <div>
+                        <div class="fb-name">TJB Legacy Construction Group</div>
+                        <div class="fb-sub">Additions · Kitchens · Baths · Decks</div>
+                    </div>
+                </div>
+                <div class="foot-links">
+                    <div class="foot-col">
+                        <h5>Explore</h5>
+                        <a href="#services">Services</a>
+                        <a href="#work">Our Work</a>
+                        <a href="#about">About</a>
+                        <a href="#reviews">Reviews</a>
+                    </div>
+                    <div class="foot-col">
+                        <h5>Contact</h5>
+                        <a href="tel:2017871258">201-787-1258</a>
+                        <p>Northern New Jersey</p>
+                        <a href="https://www.facebook.com/TheLegacyConstructionGroup" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://www.instagram.com/thelegacygroupp/" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                    <div class="foot-col">
+                        <h5>Licensed</h5>
+                        <p>NJ HIC #13VH11174200</p>
+                        <p>Electrical #34EB018170900</p>
+                        <p>Plumbing #8706</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <p>&copy; 2026 TJB Legacy Construction Group. All rights reserved. · <span class="lic">Licensed &amp; Insured NJ Contractor</span></p>
+            </div>
         </div>
     </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lb" id="lightbox">
+        <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+        <img src="" alt="Enlarged project photo" id="lbImg">
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+    </div>
+
+    <script>
+        // Mobile nav
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('show')));
+
+        // Lightbox (gallery + transformations)
+        const shots = Array.from(document.querySelectorAll('[data-full]'));
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lbImg');
+        let idx = 0;
+        function openLb(i){ idx = i; lbImg.src = shots[idx].dataset.full; lb.classList.add('open'); }
+        function move(step){ idx = (idx + step + shots.length) % shots.length; lbImg.src = shots[idx].dataset.full; }
+        shots.forEach((el, i) => el.addEventListener('click', () => openLb(i)));
+        document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+        document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); move(1); });
+        document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); move(-1); });
+        lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+        document.addEventListener('keydown', e => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') lb.classList.remove('open');
+            if (e.key === 'ArrowRight') move(1);
+            if (e.key === 'ArrowLeft') move(-1);
+        });
+
+        // Count-up stats
+        const nums = document.querySelectorAll('.num[data-count]');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = +el.dataset.count;
+                const suffix = el.dataset.suffix || '';
+                if (el.dataset.prefix) { io.unobserve(el); return; } // static (HGTV)
+                let cur = 0;
+                const step = Math.max(1, Math.ceil(target / 45));
+                const tick = () => {
+                    cur += step;
+                    if (cur >= target) { el.textContent = target + suffix; }
+                    else { el.textContent = cur + suffix; requestAnimationFrame(tick); }
+                };
+                tick();
+                io.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        nums.forEach(n => io.observe(n));
+
+        // Form (demo handler — wire to email/CRM as needed)
+        function handleQuote(e){
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type=submit]');
+            btn.textContent = 'Thank you! We’ll be in touch shortly.';
+            btn.style.background = 'linear-gradient(135deg,#2ecc71,#27ae60)';
+            btn.style.color = '#fff';
+            setTimeout(() => e.target.reset(), 200);
+            return false;
+        }
+    </script>
 </body>
 </html>
